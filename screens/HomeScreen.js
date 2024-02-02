@@ -5,13 +5,13 @@ import { Card } from "../components/Card";
 import { ActivityIndicator, Searchbar } from "react-native-paper";
 import { useEffect, useState } from "react";
 
-export const HomeScreen = ({navigate}) => {
+export const HomeScreen = ({navigation}) => {
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredData, setFilteredData] = useState([]);
     const [isSearching, setIsSearching] = useState(false);
     const [noResults, setNoResults] = useState(false);
   const renderItem = ({ item }) => (
-    <Card vehicle={item} navigate={navigate} />
+    <Card vehicle={item} navigation={navigation} />
   );
 
   useEffect(()=>{
@@ -47,7 +47,7 @@ export const HomeScreen = ({navigate}) => {
         {isSearching ? (
         <ActivityIndicator style={{marginTop:200}} animating={true} color='#000' size={'large'} />
       ) : noResults ? (
-        <Text style={styles.noResultsText}>No courses found for '{searchQuery}'</Text>
+        <Text style={styles.noResultsText}>No Car found for '{searchQuery}'</Text>
       ) : (
         <FlatList style={styles.lists}
           data={filteredData.length > 0 ? filteredData : vehiclesData}

@@ -16,7 +16,6 @@ export const NavigatotMain=()=>(
         headerShown: false,
         tabBarStyle: { 
             position: "absolute",
-            padding: 8,
             backgroundColor:  'black',
             borderTopStartRadius: 40,
             borderTopEndRadius: 40,
@@ -36,7 +35,7 @@ export const NavigatotMain=()=>(
   
           return (
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', marginBottom: -30 }}>
-              <Ionicons name={iconName} size={32} color={color} />
+              <Ionicons name={iconName} size={30} color={color} />
             </View>
             );
         },

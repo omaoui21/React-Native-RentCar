@@ -4,7 +4,7 @@ import { Text, View, TouchableOpacity, Image, StyleSheet } from "react-native";
 
 export const Card = ({ vehicle, navigation }) => {
   const onPress = () => {
-    // Handle the press event if needed
+    navigation.navigate("Info", { vehicleId: vehicle.id });
   };
 
   return (
